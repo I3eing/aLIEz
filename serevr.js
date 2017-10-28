@@ -1,4 +1,4 @@
-var express = require('express')
+﻿var express = require('express')
 var bodyParser = require('body-parser')
 var request = require('request')
 var app = express()
@@ -8,6 +8,12 @@ app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 4000))
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
+
+line.init({
+  accessToken: 'YOUR_ACCESS_TOKEN',
+  // (Optional) for webhook signature validation
+  channelSecret: 'YOUR_CHANNEL_SECRET'
+})
 
 app.post('/webhook', (req, res) => {
   var text = req.body.events[0].message.text
