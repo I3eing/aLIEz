@@ -10,9 +10,9 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
 line.init({
-  accessToken: 'YOUR_ACCESS_TOKEN',
+  accessToken: 'nHDUCFtdaY7TRP+0G0GIQLXWyhc5Ga0lTnR0nkizkgTyd47iJhi3O6IrdTznVMgfVo8Ooy+HAnExZLfxUiwlyIYuvLNv2yFN86xlILFIKAwVv8ojRWEJEPIeaWKKP2bbjLXQgyyb2mOKDFXEZcpzCwdB04t89/1O/w1cDnyilFU=',
   // (Optional) for webhook signature validation
-  channelSecret: 'YOUR_CHANNEL_SECRET'
+  channelSecret: '33aa728a05302b30d11bf825f87cf6bc'
 })
 
 app.post('/webhook', (req, res) => {
